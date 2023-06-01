@@ -5,5 +5,6 @@ app_name = 'Base'
 
 urlpatterns = [
     path('',Home,name="Home"),
-    path('login',Login,name="Login")
+    path('login',Login,name="Login"),
+    path('logout',Logout,name="Logout")
 ]
