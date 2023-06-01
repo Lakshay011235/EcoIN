@@ -22,7 +22,7 @@ def Login(request):
             if new_user is not None:
                 login(request,new_user)
                 print("User logged in successfully")
-            return redirect("Base:Home")
+            return render(request,"general/Base:Home")
                 
         if (request.POST['form-type'] == 'signup'):
             #Basic User details.
@@ -30,7 +30,7 @@ def Login(request):
             new_user = User.objects.create_user(username=username,email=email,password=password)
             new_user.save()
             login(request,new_user)
-            return redirect('Base:Home')
+            return render(request,'general/Base:Home')
 
 
     return render(request,'general\login.html')
