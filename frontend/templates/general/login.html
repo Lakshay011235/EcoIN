@@ -25,11 +25,11 @@
                     <form action="/" method="POST">
                         {% csrf_token %}
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="text" name="username" placeholder="Username" class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
+                            <input type="password" name="password" placeholder="Password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
@@ -87,7 +87,7 @@
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
                         
-                        <input type="hidden" name="type" value="login">
+                        <input type="hidden" name="type" value="signup">
 
                         <div class="field button-field">
                             <button>Signup</button>
