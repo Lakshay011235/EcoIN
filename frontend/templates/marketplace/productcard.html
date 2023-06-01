@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{% static '/marketplace/productCard.css' %}">
 </head>
 <body>
+<div class="mainWrapper">
+    {% include 'components/navbar.html' %}
     <div class="card">
         <img src="https://images.unsplash.com/photo-1633878353878-4c064d41c74c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGVjbyUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60" alt="Product Image" height="150px">
         <h2>Product Name</h2>
@@ -16,6 +18,8 @@
         <button class="toCart">Add to cart</button>
         <button style="float: right;" class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
     </div>
+    {% include 'components/footer.html' %}
+</div>
     <script>
         var productData = {
             name: "Product Name",
