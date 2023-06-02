@@ -24,7 +24,7 @@ body{
     -webkit-backdrop-filter: blur(4.1px);
     color: black;
 }
-
+    
 .card img {
     width: 220px;
     max-height: 20rem;

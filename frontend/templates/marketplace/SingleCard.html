@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/marketplace/singleCard.css' %}">
+    <link rel="stylesheet" href="/EcoIN/frontend/static/marketplace/singleCard.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% include 'components/navbar.html' %}
+    <div class="main-cont">
+        
+        <img src="https://images.unsplash.com/photo-1633878353878-4c064d41c74c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGVjbyUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60" alt="Product Image" height="150px">
+
+        <div class="info-cont">
+            <h2>Product Name</h2>
+            <h6>ABCD corp</h6>
+            <h4>&#8377; <span>200</span></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis diam eu mi dictum tempus. Aenean posuere eu urna eget condimentum.</p>
+            <div class="btn-cont">
+                <button class="toCart">Add to cart</button>
+                <button class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
+            </div>
+        </div>       
+
+    </div>
+    {% include 'components/footer.html' %}
+
+    <script>
+        var productData = {
+            name: "Product Name",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis diam eu mi dictum tempus. Aenean posuere eu urna eget condimentum.",
+            image: "product-image.jpg",
+            wishlisted: 0
+        };
+
+        var cards = document.getElementsByClassName("info-cont")
+        for (let i = 0; i < cards.length; i++) {
+
+            let wishclickcount = 0;
+            var favButton = cards[i].querySelector(".fav");
+
+            function myFunction(x) {
+                wishclickcount += 1;
+                productData.wishlisted = wishclickcount%2;
+                x.classList.toggle("fa-heart-o");
+            }
+        }
+    </script>
+</body>
+</html>
