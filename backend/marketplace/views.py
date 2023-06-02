@@ -17,3 +17,10 @@ def ProductsCart(request):
 
 def ProductsWishlist(request):
     return render(request,'marketplace/productcard.html')
+
+def ProductPage(request,id):
+    products_obj = Product.objects.filter(id = id).first()
+    product = model_to_dict(products_obj)
+    context = product
+    print(context)
+    return render(request,"marketplace/SingleCard.html",context=context)
