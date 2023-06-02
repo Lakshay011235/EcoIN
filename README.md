@@ -43,7 +43,7 @@ VirtualEnv\Scripts\activate
 In this case it is in backend
 i.e `.../EcoIn/backend`
 then type
-```
+
 Now install the requirements (this is a one time command, no need to run this again).
 ```
 pip install -r requirements.txt
