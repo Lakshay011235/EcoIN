@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tbv!y=rq^j$y3r_7(1a!6$+h-_%thx0k7$2&t7hab34l%nj&!a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','.vercel.app']
 
 
 # Application definition
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'../frontend/templates')],
+        'DIRS': [os.path.join(BASE_DIR,'frontend/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,7 +139,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,"static")
 
 # For multiple static files in different apps
 STATICFILES_DIRS = [
-     os.path.join(BASE_DIR,'../frontend/static')
+     os.path.join(BASE_DIR,'frontend/static')
  ]
 
 
