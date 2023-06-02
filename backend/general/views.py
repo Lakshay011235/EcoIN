@@ -22,22 +22,25 @@ def Login(request):
             if new_user is not None:
                 login(request,new_user)
                 print("User logged in successfully")
-            return render(request,"general/Base:Home")
+            return redirect("Base:Home")
                 
-        if (request.POST['form-type'] == 'signup'):
+        if (request.POST['type'] == 'signup'):
             #Basic User details.
             email = request.POST['email']
             new_user = User.objects.create_user(username=username,email=email,password=password)
             new_user.save()
             login(request,new_user)
-            return render(request,'general/Base:Home')
+            return redirect("Base:Home")
 
 
     return render(request,'general\login.html')
 
 def Logout(request):
     logout(request)
-    return render(request,"general\home.html")
+    return redirect("Base:Home")
 
 def FAQ(request):
     return render(request,"general/faq.html")
+
+def About(request):
+    return render(request,'general/about.html')
