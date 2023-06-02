@@ -7,7 +7,7 @@ from .models import *
 User = get_user_model()
 
 def Home(request):
-    return render(request,'general\home.html')
+    return render(request,'general/home.html')
 
 def Login(request):
     if request.method == 'POST':
@@ -33,7 +33,7 @@ def Login(request):
             return redirect("Base:Home")
 
 
-    return render(request,'general\login.html')
+    return render(request,'general/login.html')
 
 def Logout(request):
     logout(request)
