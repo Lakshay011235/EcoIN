@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('general.urls', namespace='Base')),
     path('admin/', admin.site.urls),
     path('store/', include('marketplace.urls', namespace='MarketPlace')),
+    path('carbon/', include('carbonfootprint.urls', namespace='Carbon')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
