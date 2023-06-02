@@ -32,7 +32,7 @@
         <li><a href="{% url 'Base:Home' %}">Home</a></li>
         <li><a href="{% url 'Base:About' %}">About</a></li>
         <li>
-            <a href="#" class="desktop-link">Carbon Footprint </a>
+            <a href="{% url 'Carbon:Home' %}" class="desktop-link">Carbon Footprint </a>
         </li>
         <li>
             <a href="{% url 'MarketPlace:Home' %}" class="desktop-link">Eco Store</a>
@@ -53,8 +53,8 @@
             </ul>
         </li>
         <li><a href="{% url 'Base:FAQ' %}">FAQ</a></li>
-        <li><a href="#">Profile</a></li>
         {% if user.is_authenticated %}
+        <li><a href="#">Profile</a></li>
         <li><a href="{% url 'Base:Logout' %}">Logout</a></li>
         {% else %}
         <li><a href="{% url 'Base:Login' %}">Login/Signup</a></li>
