@@ -5,5 +5,7 @@ app_name = 'MarketPlace'
 
 urlpatterns = [
      path('',Home,name="Home"),
-     path('card',Card,name="Card")
+     path('cart',ProductsCart,name="Cart"),
+     path('wishlist',ProductsWishlist,name="Wishlist"),
+     path('product/<str:id>',ProductPage,name="ProductPage")
 ]

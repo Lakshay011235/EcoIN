@@ -22,14 +22,14 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="/" method="POST">
+                    <form action="" method="POST">
                         {% csrf_token %}
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="text" name="username" placeholder="Username" class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
+                            <input type="password" name="password" placeholder="Password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
@@ -53,7 +53,7 @@
 
                 <div class="media-options">
                     <a href="#" class="field google">
-                        <div class="fa fa-google" style="font-size:28px;"></div>
+                        <img src="{% static 'images/google.png' %}" alt="" class="google-img">
                         <span>Login with Google</span>
                     </a>
                 </div>
@@ -72,7 +72,7 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Signup</header>
-                    <form action="/" method="POST">
+                    <form action="" method="POST">
                         {% csrf_token %}
                         <div class="field input-field">
                             <input type="text" name="username" placeholder="Username" class="input">
@@ -87,7 +87,7 @@
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
                         
-                        <input type="hidden" name="type" value="login">
+                        <input type="hidden" name="type" value="signup">
 
                         <div class="field button-field">
                             <button>Signup</button>
@@ -103,7 +103,7 @@
 
                 <div class="media-options">
                     <a href="#" class="field google">
-                        <img src="images/google.png" alt="" class="google-img">
+                        <img src="{% static 'images/google.png' %}" alt="" class="google-img">
                         <span>SignUp with Google</span>
                     </a>
                 </div>
