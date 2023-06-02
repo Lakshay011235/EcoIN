@@ -29,7 +29,9 @@
                     <button class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
                 </div>
                 <div>
-                    <button class="buyNow-btn" style="min-width:150px;width:10vw;max-width:400px;">Buy Now</button>
+                    <a href="{% url 'MarketPlace:Payment' %}">
+                        <button class="buyNow-btn" style="min-width:150px;width:10vw;max-width:400px;">Buy Now</button>
+                    </a>
                 </div>
             </div>
         </div>       

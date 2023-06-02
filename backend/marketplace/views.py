@@ -27,7 +27,7 @@ def ProductPage(request,id):
     print(context)
     return render(request,"marketplace/SingleCard.html",context=context)
 
-@login_required(login_url='Login')
+@login_required(login_url='Base:Login')
 def PaymentDirection(request):
     wallet_body = {
         "amount": 50,

@@ -80,7 +80,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'general.UserDetails'
 
-LOGIN_URL = '/login/'
+LOGIN_URL = 'login/'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
