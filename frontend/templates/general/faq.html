@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="{% static 'css/footercss.css' %}">
 </head>
 <body>
-
+<div class="mainWrapper">
 <!-- Navbar -->
 {% include 'components/navbar.html' %}
 <!-- End Navbar-->
 
-  <main>
+  <div class="mainContainer">
     <section>
       <h2>General Questions</h2>
       <div class="faq-item">
@@ -38,10 +38,10 @@
         <p>Yes, you can track your order using the tracking number provided.</p>
       </div>
     </section>
-  </main>
+  </div>
 
   <!--footer-->
   {% include 'components/footer.html' %}
-
+</div>
 </body>
 </html>

@@ -38,3 +38,6 @@ def Login(request):
 def Logout(request):
     logout(request)
     return render(request,"general\home.html")
+
+def FAQ(request):
+    return render(request,"general/faq.html")

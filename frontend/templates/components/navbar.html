@@ -52,7 +52,7 @@
             <li><a href="#"> Learn </a></li>
             </ul>
         </li>
-        <li><a href="#">Help</a></li>
+        <li><a href="{% url 'Base:FAQ' %}">FAQ</a></li>
         <li><a href="#">Profile</a></li>
         {% if user.is_authenticated %}
         <li><a href="{% url 'Base:Logout' %}">Logout</a></li>
