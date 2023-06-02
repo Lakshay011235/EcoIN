@@ -41,3 +41,6 @@ def Logout(request):
 
 def FAQ(request):
     return render(request,"general/faq.html")
+
+def About(request):
+    return render(request,'general/about.html')
