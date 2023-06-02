@@ -31,14 +31,20 @@
             <input type="text" name="mileage" id="mileage" placeholder="Enter MileAge of your car">
             <label for="distance">Distance Travelled : </label>
             <input type="text" id="distance" name="distance" placeholder="Enter Distance Travelled">
-            <label for="gas">LPG Consumption : </label>
+            <label for="gas">LPG Consumption (in grams) : </label>
             <input type="text" id="gas" name="gas" placeholder="Enter LPG Consumption">
-            <label for="ac">Air Condition Usage : </label>
+            <label for="ac">Air Conditioner Usage : </label>
             <input type="text" id="ac" name="ac" placeholder="Enter Air Condition Consumption">
             <button type="submit">Calculate</button>
        </form>
+       <h1> You carbon emission is: {{emission}} </h1>
     </div>
 
     {% include 'components/footer.html' %}
+    <script>
+        document.querySelector(".box").onSubmit = (e) => {
+            e.preventDefault();
+        }
+       </script>
 </body>
 </html>
