@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="mainWrapper">
-    {% include 'components/navbar.html' %}
+    {% include 'marketplace/navStore.html' %}
     <div class="mainContainer">
     {% for item in items %}
     {% comment %} Product id needs to added as hidden attribute {% endcomment %}
@@ -20,8 +20,8 @@
             <h4>&#8377; <span>{{ item.Price }}</span></h4>
             <p>{{ item.Desc }}</p>
             </div>
-            <button class="toCart">Add to cart</button>
-            <button style="float: right;" class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
+            <button class="toCart" onclick="addCart({{item.id}})">Add to cart</button>
+            <button style="float: right;" class="fav"><i onclick="myFunction(this,{{item.id}})" class="fa fa-heart-o fa-heart"></i></button>
         </div>
     {% endfor %}
     </div>
@@ -45,7 +45,7 @@
             let wishclickcount = 0;
             var favButton = cards[i].querySelector(".fav");
 
-            function myFunction(x) {
+            async function myFunction(x,id) {
                 wishclickcount += 1;
                 productData.wishlisted = wishclickcount%2;
                 x.classList.toggle("fa-heart-o");
