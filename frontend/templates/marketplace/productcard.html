@@ -9,7 +9,7 @@
 <body>
 <div class="mainWrapper">
     {% include 'components/navbar.html' %}
-
+    <div class="mainContainer">
     {% for item in items %}
     {% comment %} Product id needs to added as hidden attribute {% endcomment %}
         <div class="card">
@@ -24,6 +24,7 @@
             <button style="float: right;" class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
         </div>
     {% endfor %}
+    </div>
     {% include 'components/footer.html' %}
 </div>
     <script>

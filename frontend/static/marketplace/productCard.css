@@ -10,7 +10,15 @@
     box-sizing: border-box;
 }
 body{
-    background-image: white;
+    background: linear-gradient(132deg, rgb(192, 235, 150) 20.44%, rgb(224, 235, 213) 78.54%, rgb(37, 148, 141) 100.00%);
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
 }
 .card {
     width: 230px;
@@ -24,7 +32,7 @@ body{
     -webkit-backdrop-filter: blur(4.1px);
     color: black;
 }
-    
+
 .card img {
     width: 195px;
     max-height: 20rem;

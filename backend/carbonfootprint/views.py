@@ -7,22 +7,37 @@ def Home(request):
 def IndividualCalculator(request):
     if request.method == "POST":
         emission = 0
-        current = request.POST['electricity']   # In units = KWH
-        gas = request.POST['gas']   # In grams
+        current = float(request.POST['electricity'])   # In units = KWH
+        gas = float(request.POST['gas'])   # In grams
         vehicle = request.POST['vehicle']   # Car , Bus
-        milage = request.POST['mileage']
-        distance = request.POST['distance']
+        milage = float(request.POST['mileage'])
+        distance =float( request.POST['distance'])
+        emissions_factor = 0
 
         if (vehicle == "Car"):
             car_fuel = request.POST['fuel']     # Data is shared in the group
+            if car_fuel == 'gasoline':
+                emissions_factor = 2.31  # in kg CO2 per liter
+            elif car_fuel == 'diesel':
+                emissions_factor = 2.68  # in kg CO2 per liter
         elif (vehicle == "Bus"):
-            bus_fuel = request.POST['fuel']     # Data is shared in the group
+            car_fuel = request.POST['fuel']     # Data is shared in the group
+            emissions_factor = 0.68  # in kg CO2 per km
 
         # Fuel
 
+        if vehicle == 'car':
+            emission = (distance / milage) * emissions_factor
+        elif vehicle == 'bus':
+            emission = distance * emissions_factor
         # Electricity
+        emissions_factor = 0.93
+        emission = emission + current*emissions_factor
         
-        return HttpResponse("<h1> You carbon emission is:"+str(emission)+" </h1>")
+        #LPG
+        emissions_factor = 2.983
+        emission = emission + emissions_factor*gas
+        return render(request,"carbonfootprint/individual.html", context={"emission" : emission})
     return render(request,"carbonfootprint/individual.html")
 
 def BusinessCalculator(request):
