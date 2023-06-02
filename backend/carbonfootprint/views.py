@@ -41,4 +41,4 @@ def IndividualCalculator(request):
     return render(request,"carbonfootprint/individual.html")
 
 def BusinessCalculator(request):
-    return render(request,"general/home.html")
+    return render(request,"carbonfootprint/business.html")
