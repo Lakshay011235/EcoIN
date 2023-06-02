@@ -40,6 +40,8 @@ If you already have an existing virtual environment then activate it by
 ```
 VirtualEnv\Scripts\activate
 ```
+Navigate to the directory which has `requirements.txt` in it.
+
 In this case it is in backend
 i.e `.../EcoIn/backend`
 then type
@@ -54,7 +56,6 @@ python -m pip install pillow
 ```
 
 # Running the code
-Navigate to the directory which has `manage.py` in it.
 
 ```
 python manage.py runserver
