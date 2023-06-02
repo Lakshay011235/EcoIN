@@ -3,8 +3,15 @@ A place where you can find all the answers related to your environment concerns.
 
 # Installiation
 ### Requirements
-PIP installed in your local system.
+Install PIP in your local system.
 
+If not then follow these commands
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+```
+```
+python get-pip.py
+```
 Fork / Download this respository to you local computer.
 ### Fork
 After Forking,
@@ -14,7 +21,7 @@ Then type the following commands
 git init
 ```
 ```
-git clone https://github.com/<GitHub Username>/EcoIN
+git clone https://github.com/SanchitMahajan236/EcoIN.git
 ```
 ### Download
 Directly download the repository
@@ -29,14 +36,18 @@ In this case I am calling my virtual environment as `VirtualEnv`.
 python -m venv VirtualEnv
 ```
 
-If you already has an existing virtual environment then activate it by
+If you already have an existing virtual environment then activate it by
 ```
-<Your_environment_name>\Scripts\activate
+VirtualEnv\Scripts\activate
 ```
 
 Now install the requirements (this is a one time command, no need to run this again).
 ```
 pip install -r requirements.txt
+```
+If there is any issue in above step, try the following command to install pillow, and rerun the above command
+```
+python -m pip install pillow
 ```
 
 # Running the code
