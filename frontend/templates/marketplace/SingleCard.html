@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static '/marketplace/singleCard.css' %}">
-    <link rel="stylesheet" href="/EcoIN/frontend/static/marketplace/singleCard.css">
+    <!-- <link rel="stylesheet" href="/EcoIN/frontend/static/marketplace/singleCard.css"> -->
     <title>Document</title>
 </head>
 <body>
@@ -22,8 +22,13 @@
             <h4>&#8377; <span>200</span></h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis diam eu mi dictum tempus. Aenean posuere eu urna eget condimentum.</p>
             <div class="btn-cont">
-                <button class="toCart">Add to cart</button>
-                <button class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
+                <div>
+                    <button class="toCart">Add to cart</button>
+                    <button class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
+                </div>
+                <div>
+                    <button class="buyNow-btn">Buy Now</button>
+                </div>
             </div>
         </div>       
 

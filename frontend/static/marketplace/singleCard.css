@@ -67,8 +67,16 @@
 }
 .btn-cont .toCart{
     background: rgba(255, 255, 255, 0.19);
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.1px);
     -webkit-backdrop-filter: blur(4.1px);
+}
+.btn-cont .buyNow-btn{
+    padding: 0.8rem 1.4rem;
+    font-size: 1.1rem;
+    background-color: rgb(58, 238, 58);
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
 }
