@@ -12,12 +12,14 @@
 
     {% for item in items %}
     {% comment %} Product id needs to added as hidden attribute {% endcomment %}
-        <div class="card" onclick="showProduct({{item.id}})">
+        <div class="card">
+            <div class="cardWrapper" onclick="showProduct({{item.id}})">
             <img src="{% static 'images/' %}{{item.Img}}" alt="Product Image" height="150px">
             <h2> {{item.Name }}</h2>
             <h6>{{ item.Company }}</h6>
             <h4>&#8377; <span>{{ item.Price }}</span></h4>
             <p>{{ item.Desc }}</p>
+            </div>
             <button class="toCart">Add to cart</button>
             <button style="float: right;" class="fav"><i onclick="myFunction(this)" class="fa fa-heart-o fa-heart"></i></button>
         </div>
